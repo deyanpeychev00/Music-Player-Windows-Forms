@@ -53,7 +53,7 @@ namespace Task4_MusicPlayer
             InitializeComponent();
             this.UtilityService = new Utility(this);
             player.currentPlaylist = player.newPlaylist("playlist", "");
-            this.UpdatePlaylistSongsCount();
+            this.ResetPlaylistCollections();
         }
 
         /// <summary>
@@ -172,7 +172,14 @@ namespace Task4_MusicPlayer
         /// </summary>
         private void PlaySelectedSong(object sender, MouseEventArgs e)
         {
-            player.Ctlcontrols.playItem(player.currentPlaylist.get_Item(playlistListbox.SelectedIndex));
+            try
+            {
+                player.Ctlcontrols.playItem(player.currentPlaylist.get_Item(playlistListbox.SelectedIndex));
+            }
+            catch (ArgumentException)
+            {
+                this.AddSongsToPlaylist();
+            }
         }
 
         /// <summary>
@@ -414,6 +421,12 @@ namespace Task4_MusicPlayer
                 }
 
                 playlistListbox.Items.Clear();
+
+                string currentPlayListName = player.currentPlaylist.name;
+
+                player.playlistCollection.remove(player.currentPlaylist);
+                var newPlaylist = player.playlistCollection.newPlaylist(currentPlayListName);
+                player.currentPlaylist = newPlaylist;
 
                 for (int i = 0; i < this.songFiles.Length; i++)
                 {

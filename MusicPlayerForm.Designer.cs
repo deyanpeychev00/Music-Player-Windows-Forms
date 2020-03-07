@@ -37,22 +37,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.addSongsToPlaylistButton = new System.Windows.Forms.Button();
             this.removeSongFromPlaylistButton = new System.Windows.Forms.Button();
-            this.aboutButton = new System.Windows.Forms.Button();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.playlistToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.loadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.songsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.removeCurrentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.playerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.playToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pauseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.stopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.previousSongToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.nextSongToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.savePlaylistDialog = new System.Windows.Forms.SaveFileDialog();
             this.loadPlaylistDialog = new System.Windows.Forms.OpenFileDialog();
@@ -69,6 +61,14 @@
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.loadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.playToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pauseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.stopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.previousSongToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nextSongToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.player)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -81,6 +81,7 @@
             this.tableLayoutPanel5.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // playlistListbox
@@ -172,7 +173,7 @@
             this.addSongsToPlaylistButton.ForeColor = System.Drawing.Color.White;
             this.addSongsToPlaylistButton.Location = new System.Drawing.Point(3, 3);
             this.addSongsToPlaylistButton.Name = "addSongsToPlaylistButton";
-            this.addSongsToPlaylistButton.Size = new System.Drawing.Size(140, 44);
+            this.addSongsToPlaylistButton.Size = new System.Drawing.Size(139, 44);
             this.addSongsToPlaylistButton.TabIndex = 3;
             this.addSongsToPlaylistButton.Text = "Add Songs";
             this.addSongsToPlaylistButton.UseVisualStyleBackColor = false;
@@ -186,26 +187,13 @@
             this.removeSongFromPlaylistButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.removeSongFromPlaylistButton.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.removeSongFromPlaylistButton.ForeColor = System.Drawing.Color.White;
-            this.removeSongFromPlaylistButton.Location = new System.Drawing.Point(149, 3);
+            this.removeSongFromPlaylistButton.Location = new System.Drawing.Point(148, 3);
             this.removeSongFromPlaylistButton.Name = "removeSongFromPlaylistButton";
-            this.removeSongFromPlaylistButton.Size = new System.Drawing.Size(140, 44);
+            this.removeSongFromPlaylistButton.Size = new System.Drawing.Size(139, 44);
             this.removeSongFromPlaylistButton.TabIndex = 4;
             this.removeSongFromPlaylistButton.Text = "Remove Song";
             this.removeSongFromPlaylistButton.UseVisualStyleBackColor = false;
             this.removeSongFromPlaylistButton.Click += new System.EventHandler(this.RemoveSongFromPlaylist);
-            // 
-            // aboutButton
-            // 
-            this.aboutButton.Cursor = System.Windows.Forms.Cursors.Help;
-            this.aboutButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.aboutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.aboutButton.Location = new System.Drawing.Point(435, 3);
-            this.aboutButton.Name = "aboutButton";
-            this.aboutButton.Size = new System.Drawing.Size(63, 24);
-            this.aboutButton.TabIndex = 5;
-            this.aboutButton.Text = "About";
-            this.aboutButton.UseVisualStyleBackColor = true;
-            this.aboutButton.Click += new System.EventHandler(this.DisplayAboutForm);
             // 
             // openFileDialog
             // 
@@ -235,22 +223,6 @@
             this.playlistToolStripMenuItem.Name = "playlistToolStripMenuItem";
             this.playlistToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
             this.playlistToolStripMenuItem.Text = "Playlist";
-            // 
-            // loadToolStripMenuItem
-            // 
-            this.loadToolStripMenuItem.Image = global::Task4_MusicPlayer.Properties.Resources.load;
-            this.loadToolStripMenuItem.Name = "loadToolStripMenuItem";
-            this.loadToolStripMenuItem.Size = new System.Drawing.Size(109, 22);
-            this.loadToolStripMenuItem.Text = "Load...";
-            this.loadToolStripMenuItem.Click += new System.EventHandler(this.LoadPlaylist);
-            // 
-            // saveToolStripMenuItem
-            // 
-            this.saveToolStripMenuItem.Image = global::Task4_MusicPlayer.Properties.Resources.save;
-            this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(109, 22);
-            this.saveToolStripMenuItem.Text = "Save...";
-            this.saveToolStripMenuItem.Click += new System.EventHandler(this.SavePlaylist);
             // 
             // toolStripSeparator1
             // 
@@ -291,51 +263,6 @@
             this.playerToolStripMenuItem.Name = "playerToolStripMenuItem";
             this.playerToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
             this.playerToolStripMenuItem.Text = "Player";
-            // 
-            // playToolStripMenuItem
-            // 
-            this.playToolStripMenuItem.Image = global::Task4_MusicPlayer.Properties.Resources.play;
-            this.playToolStripMenuItem.Name = "playToolStripMenuItem";
-            this.playToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
-            this.playToolStripMenuItem.Tag = "play";
-            this.playToolStripMenuItem.Text = "Play";
-            this.playToolStripMenuItem.Click += new System.EventHandler(this.ManipulatePlayer);
-            // 
-            // pauseToolStripMenuItem
-            // 
-            this.pauseToolStripMenuItem.Image = global::Task4_MusicPlayer.Properties.Resources.pause;
-            this.pauseToolStripMenuItem.Name = "pauseToolStripMenuItem";
-            this.pauseToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
-            this.pauseToolStripMenuItem.Tag = "pause";
-            this.pauseToolStripMenuItem.Text = "Pause";
-            this.pauseToolStripMenuItem.Click += new System.EventHandler(this.ManipulatePlayer);
-            // 
-            // stopToolStripMenuItem
-            // 
-            this.stopToolStripMenuItem.Image = global::Task4_MusicPlayer.Properties.Resources.stop;
-            this.stopToolStripMenuItem.Name = "stopToolStripMenuItem";
-            this.stopToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
-            this.stopToolStripMenuItem.Tag = "stop";
-            this.stopToolStripMenuItem.Text = "Stop";
-            this.stopToolStripMenuItem.Click += new System.EventHandler(this.ManipulatePlayer);
-            // 
-            // previousSongToolStripMenuItem
-            // 
-            this.previousSongToolStripMenuItem.Image = global::Task4_MusicPlayer.Properties.Resources.previous;
-            this.previousSongToolStripMenuItem.Name = "previousSongToolStripMenuItem";
-            this.previousSongToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
-            this.previousSongToolStripMenuItem.Tag = "previous";
-            this.previousSongToolStripMenuItem.Text = "Previous Song";
-            this.previousSongToolStripMenuItem.Click += new System.EventHandler(this.ManipulatePlayer);
-            // 
-            // nextSongToolStripMenuItem
-            // 
-            this.nextSongToolStripMenuItem.Image = global::Task4_MusicPlayer.Properties.Resources.next;
-            this.nextSongToolStripMenuItem.Name = "nextSongToolStripMenuItem";
-            this.nextSongToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
-            this.nextSongToolStripMenuItem.Tag = "next";
-            this.nextSongToolStripMenuItem.Text = "Next Song";
-            this.nextSongToolStripMenuItem.Click += new System.EventHandler(this.ManipulatePlayer);
             // 
             // aboutToolStripMenuItem
             // 
@@ -400,10 +327,10 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.10799F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.89201F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 140F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 68F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 70F));
             this.tableLayoutPanel2.Controls.Add(this.removeSongFromPlaylistButton, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.addSongsToPlaylistButton, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.aboutButton, 3, 0);
+            this.tableLayoutPanel2.Controls.Add(this.pictureBox1, 3, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 418);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -529,6 +456,84 @@
             this.panel3.Size = new System.Drawing.Size(500, 38);
             this.panel3.TabIndex = 1;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pictureBox1.Image = global::Task4_MusicPlayer.Properties.Resources.info;
+            this.pictureBox1.Location = new System.Drawing.Point(478, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(20, 44);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.DisplayAboutForm);
+            // 
+            // loadToolStripMenuItem
+            // 
+            this.loadToolStripMenuItem.Image = global::Task4_MusicPlayer.Properties.Resources.load;
+            this.loadToolStripMenuItem.Name = "loadToolStripMenuItem";
+            this.loadToolStripMenuItem.Size = new System.Drawing.Size(109, 22);
+            this.loadToolStripMenuItem.Text = "Load...";
+            this.loadToolStripMenuItem.Click += new System.EventHandler(this.LoadPlaylist);
+            // 
+            // saveToolStripMenuItem
+            // 
+            this.saveToolStripMenuItem.Image = global::Task4_MusicPlayer.Properties.Resources.save;
+            this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(109, 22);
+            this.saveToolStripMenuItem.Text = "Save...";
+            this.saveToolStripMenuItem.Click += new System.EventHandler(this.SavePlaylist);
+            // 
+            // playToolStripMenuItem
+            // 
+            this.playToolStripMenuItem.Image = global::Task4_MusicPlayer.Properties.Resources.play;
+            this.playToolStripMenuItem.Name = "playToolStripMenuItem";
+            this.playToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Space)));
+            this.playToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
+            this.playToolStripMenuItem.Tag = "play";
+            this.playToolStripMenuItem.Text = "Play";
+            this.playToolStripMenuItem.Click += new System.EventHandler(this.ManipulatePlayer);
+            // 
+            // pauseToolStripMenuItem
+            // 
+            this.pauseToolStripMenuItem.Image = global::Task4_MusicPlayer.Properties.Resources.pause;
+            this.pauseToolStripMenuItem.Name = "pauseToolStripMenuItem";
+            this.pauseToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.Space)));
+            this.pauseToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
+            this.pauseToolStripMenuItem.Tag = "pause";
+            this.pauseToolStripMenuItem.Text = "Pause";
+            this.pauseToolStripMenuItem.Click += new System.EventHandler(this.ManipulatePlayer);
+            // 
+            // stopToolStripMenuItem
+            // 
+            this.stopToolStripMenuItem.Image = global::Task4_MusicPlayer.Properties.Resources.stop;
+            this.stopToolStripMenuItem.Name = "stopToolStripMenuItem";
+            this.stopToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
+            | System.Windows.Forms.Keys.Space)));
+            this.stopToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
+            this.stopToolStripMenuItem.Tag = "stop";
+            this.stopToolStripMenuItem.Text = "Stop";
+            this.stopToolStripMenuItem.Click += new System.EventHandler(this.ManipulatePlayer);
+            // 
+            // previousSongToolStripMenuItem
+            // 
+            this.previousSongToolStripMenuItem.Image = global::Task4_MusicPlayer.Properties.Resources.previous;
+            this.previousSongToolStripMenuItem.Name = "previousSongToolStripMenuItem";
+            this.previousSongToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
+            this.previousSongToolStripMenuItem.Tag = "previous";
+            this.previousSongToolStripMenuItem.Text = "Previous Song";
+            this.previousSongToolStripMenuItem.Click += new System.EventHandler(this.ManipulatePlayer);
+            // 
+            // nextSongToolStripMenuItem
+            // 
+            this.nextSongToolStripMenuItem.Image = global::Task4_MusicPlayer.Properties.Resources.next;
+            this.nextSongToolStripMenuItem.Name = "nextSongToolStripMenuItem";
+            this.nextSongToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
+            this.nextSongToolStripMenuItem.Tag = "next";
+            this.nextSongToolStripMenuItem.Text = "Next Song";
+            this.nextSongToolStripMenuItem.Click += new System.EventHandler(this.ManipulatePlayer);
+            // 
             // MusicPlayerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -558,6 +563,7 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -570,7 +576,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button addSongsToPlaylistButton;
         private System.Windows.Forms.Button removeSongFromPlaylistButton;
-        private System.Windows.Forms.Button aboutButton;
         private System.Windows.Forms.OpenFileDialog openFileDialog;
    //     private AxWMPLib.AxWindowsMediaPlayer player;
         private System.Windows.Forms.MenuStrip menuStrip;
@@ -605,6 +610,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.CheckBox shuffleCheckbox;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
